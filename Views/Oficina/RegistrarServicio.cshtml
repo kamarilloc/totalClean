@@ -1,0 +1,97 @@
+@model TotalClean.Models.Oficina
+
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="RegistrarServicio">
+
+
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group">
+                <label asp-for="User" class="control-label">Usuario: </label>
+                <input asp-for="User" class="form-control" />
+                <span asp-validation-for="User" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Empresa" class="control-label"></label>
+                <input asp-for="Empresa" class="form-control" />
+                <span asp-validation-for="Empresa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RUC" class="control-label"></label>
+                <input asp-for="RUC" class="form-control" />
+                <span asp-validation-for="RUC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Correo" class="control-label"></label>
+                <input asp-for="Correo" class="form-control" />
+                <span asp-validation-for="Correo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefono" class="control-label"></label>
+                <input asp-for="Telefono" class="form-control" />
+                <span asp-validation-for="Telefono" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dia" class="control-label"></label>
+                <input asp-for="Dia" class="form-control" />
+                <span asp-validation-for="Dia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Horas" class="control-label"></label>
+                <select asp-for="Horas" class="form-control" >
+                    <option value="1">1 Hora</option>
+                    <option value="2">2 Horas</option>
+                    <option value="3">3 Horas</option>
+                    <option value="4">4 Horas</option>
+                    <option value="5">5 Horas</option>
+                    <option value="6">6 Horas</option>
+                    <option value="7">7 Horas</option>
+                    <option value="8">8 Horas</option>
+                </select>
+                <span asp-validation-for="Horas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ciudad" class="control-label"></label>
+                <input asp-for="Ciudad" class="form-control" />
+                <span asp-validation-for="Ciudad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Distrito" class="control-label"></label>
+                <input asp-for="Distrito" class="form-control" />
+                <span asp-validation-for="Distrito" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Direccion" class="control-label"></label>
+                <input asp-for="Direccion" class="form-control" />
+                <span asp-validation-for="Direccion" class="text-danger"></span>
+            </div>
+            
+
+            
+
+            
+            <div class="form-group">
+                <input type="submit" value="Registrar Servicio" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Inicio">Volver</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

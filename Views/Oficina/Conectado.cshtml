@@ -1,0 +1,12 @@
+@model IEnumerable<TotalClean.Models.Usuario>
+
+
+@foreach (var item in Model) {
+    @Html.DisplayFor(modelItem => item.User)          
+}
+@foreach (var item in Model) {
+    <a class="btn btn-primary" href="RegistrarServicio">SOLICITAR SERVICIO</a>       
+}
+@foreach (var item in Model) {
+    <a class="btn btn-primary" href="ConfirmarUsuario">VER SERVICIOS SOLICITADOS</a>     
+}

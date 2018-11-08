@@ -9,6 +9,9 @@ namespace TotalClean.Models
         {
         }
 
-        
+        public DbSet<TotalClean.Models.Usuario> Usuario { get; set; }
+        public DbSet<TotalClean.Models.Admin> Admin{ get; set; }
+        public DbSet<TotalClean.Models.Oficina> Oficina { get; set; }
+        //public DbSet<TotalClean.Models.Hogar> Hogar { get; set; }
     }
 }

@@ -11,3 +11,6 @@ CREATE TABLE "Student" (
 INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
 VALUES ('20181010130110_InitialCreate', '2.0.3-rtm-10026');
 
+
+INSERT INTO Admin (ID,Nombre,Apellidos,Contraseña) 
+VALUES (1,"Kenny","Amarillo","123");
