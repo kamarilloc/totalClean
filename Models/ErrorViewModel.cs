@@ -1,6 +1,6 @@
 using System;
 
-namespace demomvc.Models
+namespace TotalClean.Models
 {
     public class ErrorViewModel
     {

@@ -7,11 +7,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using demomvc.Models;
+using TotalClean.Models;
 //using MySql.Data.EntityFrameworkCore.Extensions;
 
 
-namespace demomvc
+namespace TotalClean
 {
     public class Startup
     {

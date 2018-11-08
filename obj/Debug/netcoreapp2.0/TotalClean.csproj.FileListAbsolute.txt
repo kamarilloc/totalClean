@@ -1,0 +1,11 @@
+C:\Users\Clase\Desktop\TotalClean\totalClean\obj\Debug\netcoreapp2.0\TotalClean.csprojAssemblyReference.cache
+C:\Users\Clase\Desktop\TotalClean\totalClean\obj\Debug\netcoreapp2.0\TotalClean.csproj.CoreCompileInputs.cache
+C:\Users\Clase\Desktop\TotalClean\totalClean\obj\Debug\netcoreapp2.0\TotalClean.AssemblyInfoInputs.cache
+C:\Users\Clase\Desktop\TotalClean\totalClean\obj\Debug\netcoreapp2.0\TotalClean.AssemblyInfo.cs
+C:\Users\Clase\Desktop\TotalClean\totalClean\bin\Debug\netcoreapp2.0\TotalClean.deps.json
+C:\Users\Clase\Desktop\TotalClean\totalClean\bin\Debug\netcoreapp2.0\TotalClean.runtimeconfig.json
+C:\Users\Clase\Desktop\TotalClean\totalClean\bin\Debug\netcoreapp2.0\TotalClean.runtimeconfig.dev.json
+C:\Users\Clase\Desktop\TotalClean\totalClean\bin\Debug\netcoreapp2.0\TotalClean.dll
+C:\Users\Clase\Desktop\TotalClean\totalClean\bin\Debug\netcoreapp2.0\TotalClean.pdb
+C:\Users\Clase\Desktop\TotalClean\totalClean\obj\Debug\netcoreapp2.0\TotalClean.dll
+C:\Users\Clase\Desktop\TotalClean\totalClean\obj\Debug\netcoreapp2.0\TotalClean.pdb

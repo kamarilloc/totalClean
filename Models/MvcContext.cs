@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace demomvc.Models
+namespace TotalClean.Models
 {
     public class MvcContext : DbContext
     {
@@ -9,6 +9,6 @@ namespace demomvc.Models
         {
         }
 
-        public DbSet<demomvc.Models.Student> Student { get; set; }
+        
     }
 }
