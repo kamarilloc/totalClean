@@ -77,34 +77,17 @@ namespace TotalClean.Controllers
             return View(await usuarios.ToListAsync());
         }
         //Confirmar Usuario
-        public async Task<IActionResult> ConfirmarUsuarioO(string usuario)
+        public IActionResult ConfirmarUsuarioO()
         {
-             var oficinas = from m in _context.Oficina
-                 select m;
-
-            if (!String.IsNullOrEmpty(usuario))
-            {
-                oficinas = oficinas.Where(o => o.User.Equals(usuario));
-                
-                return RedirectToAction("Empresa");
-            }
-            
-            return View(await oficinas.ToListAsync());
+             
+            return View();
         }
         //
-        public async Task<IActionResult> ConfirmarUsuarioH(string usuario)
+        public IActionResult ConfirmarUsuarioH()
         {
-             var hogares = from m in _context.Oficina
-                 select m;
-
-            if (!String.IsNullOrEmpty(usuario))
-            {
-                hogares = hogares.Where(o => o.User.Equals(usuario));
-                
-                return RedirectToAction("Empresa");
-            }
+             
             
-            return View(await hogares.ToListAsync());
+            return View();
         }
        //Servicios de limpieza solicitados [*]
        public async Task<IActionResult> Oficinas (string usuario)
@@ -122,7 +105,7 @@ namespace TotalClean.Controllers
         //
         public async Task<IActionResult> Hogares (string usuario)
         {
-             var hogares = from m in _context.Oficina
+             var hogares = from m in _context.Hogar
                  select m;
 
             

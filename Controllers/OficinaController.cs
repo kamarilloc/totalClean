@@ -109,7 +109,7 @@ public async Task<IActionResult> Conectar(string usuario)
             return View(await hogares.ToListAsync());
         }
        
-       public async Task<IActionResult> Oficianas (string usuario)
+       public async Task<IActionResult> Oficinas (string usuario)
         {
              var oficinas = from m in _context.Oficina
                  select m;
