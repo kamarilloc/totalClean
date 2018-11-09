@@ -79,7 +79,7 @@ public async Task<IActionResult> Conectar(string usuario)
 
         
          
-        public async Task<IActionResult> ConfirmarUsuario(string usuario)
+        public async Task<IActionResult> ConfirmarUsuarioO(string usuario)
         {
              var oficinas = from m in _context.Oficina
                  select m;
@@ -88,13 +88,28 @@ public async Task<IActionResult> Conectar(string usuario)
             {
                 oficinas = oficinas.Where(o => o.User.Equals(usuario));
                 
-                return RedirectToAction("Empresa");
+                return RedirectToAction("Oficinas");
             }
             
             return View(await oficinas.ToListAsync());
         }
+        //
+        public async Task<IActionResult> ConfirmarUsuarioH(string usuario)
+        {
+             var hogares = from m in _context.Oficina
+                 select m;
+
+            if (!String.IsNullOrEmpty(usuario))
+            {
+                hogares = hogares.Where(o => o.User.Equals(usuario));
+                
+                return RedirectToAction("Empresa");
+            }
+            
+            return View(await hogares.ToListAsync());
+        }
        
-       public async Task<IActionResult> Oficinas (string usuario)
+       public async Task<IActionResult> Oficianas (string usuario)
         {
              var oficinas = from m in _context.Oficina
                  select m;
@@ -106,6 +121,17 @@ public async Task<IActionResult> Conectar(string usuario)
             
             return View(await oficinas.ToListAsync());
         }
-        
+        public async Task<IActionResult> Hogares (string usuario)
+        {
+             var hogares = from m in _context.Oficina
+                 select m;
+
+            
+                hogares= hogares.Where(o => o.User.Equals(usuario));
+                
+           
+            
+            return View(await hogares.ToListAsync());
+        }
     }
 }

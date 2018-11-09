@@ -22,21 +22,9 @@
                 <input asp-for="User" class="form-control" />
                 <span asp-validation-for="User" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Empresa" class="control-label"></label>
-                <input asp-for="Empresa" class="form-control" />
-                <span asp-validation-for="Empresa" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="RUC" class="control-label"></label>
-                <input asp-for="RUC" class="form-control" />
-                <span asp-validation-for="RUC" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Correo" class="control-label"></label>
-                <input asp-for="Correo" class="form-control" />
-                <span asp-validation-for="Correo" class="text-danger"></span>
-            </div>
+            
+            
+            
             <div class="form-group">
                 <label asp-for="Telefono" class="control-label"></label>
                 <input asp-for="Telefono" class="form-control" />
@@ -75,6 +63,17 @@
                 <label asp-for="Direccion" class="control-label"></label>
                 <input asp-for="Direccion" class="form-control" />
                 <span asp-validation-for="Direccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tipo" class="control-label"></label>
+                <select asp-for="Tipo" class="form-control" >
+                    <option value="Limpieza General">Limpieza General</option>
+                    <option value="avandería">Lavandería</option>
+                    <option value="Ayuda Con Mascotas">Ayuda Con Mascotas</option>
+                    <option value="Cocina">Cocina</option>
+                    <option value="Planchad">Planchado</option>
+                </select>
+                <span asp-validation-for="Horas" class="text-danger"></span>
             </div>
             
 

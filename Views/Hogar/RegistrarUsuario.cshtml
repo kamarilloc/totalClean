@@ -1,0 +1,68 @@
+@model TotalClean.Models.Usuario
+
+@{
+    ViewData["Title"] = "";
+}
+
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <form asp-action="RegistrarUsuario">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label">NOMBRES: </label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Apellidos" class="control-label">APELLIDOS:</label>
+                <input asp-for="Apellidos" class="form-control" />
+                <span asp-validation-for="Apellidos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="User" class="control-label">USUARIO: </label>
+                <input asp-for="User" class="form-control" />
+                <span asp-validation-for="User" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contraseña" class="control-label">CONTRASEÑA: </label>
+                <input asp-for="Contraseña" class="form-control" type = "password"/>
+                <span asp-validation-for="Contraseña" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirmarContraseña" class="control-label">CONFIRMAR CONTRASEÑA: </label>
+                <input asp-for="ConfirmarContraseña" class="form-control" type = "password" />
+                <span asp-validation-for="ConfirmarContraseña" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Correo" class="control-label">CORREO: </label>
+                <input asp-for="Correo" class="form-control" />
+                <span asp-validation-for="Correo" type="email"  placeholder="example@mail.ru" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirmarCorreo" class="control-label">CONFIMAR CORREO:</label>
+                <input asp-for="ConfirmarCorreo" class="form-control" />
+                <span asp-validation-for="ConfirmarCorreo" type="email" placeholder="example@mail.ru" class="text-danger"></span>
+            </div>
+            
+
+            <div class="form-group">
+                <input type="submit" value="Registrar" class="btn btn-default" />
+            </div>
+        </form>
+        <a class="btn btn-primary" href="Inicio">Volver</a>  
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
