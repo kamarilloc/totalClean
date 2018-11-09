@@ -5,22 +5,21 @@
     
 
 @foreach (var item in Model) {
-        
-               <h1> @Html.DisplayFor(modelItem => item.Nombre) </h1>
-            
+    <h1> @Html.DisplayFor(modelItem => item.Nombre) </h1>
 }
 <br><br><br>
-@foreach (var item in Model) {
-        
-               
-            
+@foreach (var item in Model) {      
     <h3> Apellidos: @Html.DisplayFor(modelItem => item.Apellidos) </h3>
 }
-@foreach (var item in Model) {
-        
-               
-            
+@foreach (var item in Model) {        
     <a class="btn btn-primary" href="Usuarios">Usuarios</a>
 }
+@foreach (var item in Model) {        
+    <a class="btn btn-primary" href="Oficinas">Servicios Para Oficinas</a>
+}
+@foreach (var item in Model) {        
+    <a class="btn btn-primary" href="Hogares">Servicios Para Hogares</a>
+}
+
 <br><br><br>
 

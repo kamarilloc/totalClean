@@ -59,5 +59,44 @@ public async Task<IActionResult> Conectar(string contraseña)
             
             return View(await admins.ToListAsync());
         }
+
+    public async Task<IActionResult> Oficinas(string searchString)
+        {
+             var oficinas = from m in _context.Oficina
+                 select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                oficinas = oficinas.Where(u => u.User.Contains(searchString));
+            }
+            
+            return View(await oficinas.ToListAsync());
+        }
+        public async Task<IActionResult> Hogares(string usuario, string ciudad,string distrito,string tipo)
+        {
+             var hogares = from m in _context.Hogar
+                 select m;
+
+            if (!String.IsNullOrEmpty(usuario))
+            {
+                hogares = hogares.Where(h => h.User.Contains(usuario));
+            }
+            if (!String.IsNullOrEmpty(ciudad))
+            {
+                hogares = hogares.Where(h => h.Ciudad.Contains(ciudad));
+            }
+
+            if (!String.IsNullOrEmpty(distrito))
+            {
+                hogares = hogares.Where(h => h.Distrito.Contains(distrito));
+            }
+            if (!String.IsNullOrEmpty(tipo))
+            {
+                hogares = hogares.Where(h => h.Tipo.Contains(tipo));
+            }
+            
+            return View(await hogares.ToListAsync());
+        }
+       
     }
 }

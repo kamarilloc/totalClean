@@ -4,34 +4,45 @@
     ViewData["Title"] = "Index";
 }
 
+<link rel="stylesheet" href="~/css/tablas.css" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <h2>Usuarios</h2>
 
 <form asp-controller="Usuarios" asp-action="Usuarios">
     <p>
-        Title: <input type="text" name="SearchString">
-        <input type="submit" value="Filter" />
-    </p>
+        Usuario: <input type="text" name="usuario">
+        <input type="submit"  class="w3-button w3-light-green" value="Buscar" />
+    </p>    
 </form>
+<br>
 
-<table class="table">
+
+<table class="table" id="t01">
     <thead>
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Nombre)
-                </th>
-            <th></th>
+            <th> @Html.DisplayNameFor(model => model.ID)</th>
+            <th> @Html.DisplayNameFor(model => model.Nombre)</th>
+            <th> @Html.DisplayNameFor(model => model.Apellidos)</th>
+            <th> @Html.DisplayNameFor(model => model.User)</th>
+            <th> @Html.DisplayNameFor(model => model.Contraseña)</th>
+            <th> @Html.DisplayNameFor(model => model.Correo)</th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
-            </td>
-            <td>
-                <a asp-action="Usuarios" asp-route-id="@item.ID">Details</a> |
-            </td>
+            <td>@Html.DisplayFor(modelItem => item.ID)</td>
+            <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
+            <td>@Html.DisplayFor(modelItem => item.Apellidos)</td>
+            <td>@Html.DisplayFor(modelItem => item.User)</td>
+            <td>@Html.DisplayFor(modelItem => item.Contraseña)</td>
+            <td>@Html.DisplayFor(modelItem => item.Correo)</td>
         </tr>
 }
     </tbody>
 </table>
+
+
+
+  
+

@@ -20,7 +20,6 @@ namespace TotalClean.Models
         [Required(ErrorMessage = "Hace Falta Indicar Distrito")]
         public string Distrito{ get; set; }
         [Required(ErrorMessage = "Hace Falta Indicar Direccion")]
-
         public string Direccion { get; set; }
         [Required(ErrorMessage = "Hace Falta Indicar Un Tipo")]
         public string Tipo { get; set; }
