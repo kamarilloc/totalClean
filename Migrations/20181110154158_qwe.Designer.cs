@@ -3,16 +3,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Microsoft.EntityFrameworkCore.Storage;
-using Microsoft.EntityFrameworkCore.Storage.Internal;
+using MySql.Data.EntityFrameworkCore.Storage.Internal;
 using System;
 using TotalClean.Models;
 
 namespace TotalClean.Migrations
 {
     [DbContext(typeof(MvcContext))]
-    [Migration("20181108224909_asd")]
-    partial class asd
+    [Migration("20181110154158_qwe")]
+    partial class qwe
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -34,6 +33,37 @@ namespace TotalClean.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Admin");
+                });
+
+            modelBuilder.Entity("TotalClean.Models.Hogar", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Ciudad")
+                        .IsRequired();
+
+                    b.Property<DateTime>("Dia");
+
+                    b.Property<string>("Direccion")
+                        .IsRequired();
+
+                    b.Property<string>("Distrito")
+                        .IsRequired();
+
+                    b.Property<int>("Horas");
+
+                    b.Property<int>("Telefono");
+
+                    b.Property<string>("Tipo")
+                        .IsRequired();
+
+                    b.Property<string>("User")
+                        .IsRequired();
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Hogar");
                 });
 
             modelBuilder.Entity("TotalClean.Models.Oficina", b =>

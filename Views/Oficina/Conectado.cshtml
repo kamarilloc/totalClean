@@ -4,6 +4,14 @@
 @foreach (var item in Model) {
     @Html.DisplayFor(modelItem => item.User)          
 }
+<br><br><br>
+@foreach (var item in Model) {
+    @Html.DisplayFor(modelItem => item.Nombre)          
+}
+@foreach (var item in Model) {
+    @Html.DisplayFor(modelItem => item.Apellidos)          
+}
+<br><br><br><br><br><br><br><br>
 @foreach (var item in Model) {
     <a class="btn btn-primary" href="RegistrarServicio">SOLICITAR SERVICIO</a>       
 }
@@ -13,3 +21,4 @@
 @foreach (var item in Model) {
     <a class="btn btn-primary" href="ConfirmarUsuarioH">VER SERVICIOS SOLICITADOS PARA HOGAR</a>     
 }
+<br><br><br><br><br><br><br><br>

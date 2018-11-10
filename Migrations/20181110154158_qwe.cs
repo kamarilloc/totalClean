@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace TotalClean.Migrations
 {
-    public partial class asd : Migration
+    public partial class qwe : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,7 +13,7 @@ namespace TotalClean.Migrations
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                        .Annotation("MySQL:AutoIncrement", true),
                     Apellidos = table.Column<string>(nullable: true),
                     Contraseña = table.Column<string>(nullable: true),
                     Nombre = table.Column<string>(nullable: true)
@@ -24,11 +24,31 @@ namespace TotalClean.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Hogar",
+                columns: table => new
+                {
+                    ID = table.Column<int>(nullable: false)
+                        .Annotation("MySQL:AutoIncrement", true),
+                    Ciudad = table.Column<string>(nullable: false),
+                    Dia = table.Column<DateTime>(nullable: false),
+                    Direccion = table.Column<string>(nullable: false),
+                    Distrito = table.Column<string>(nullable: false),
+                    Horas = table.Column<int>(nullable: false),
+                    Telefono = table.Column<int>(nullable: false),
+                    Tipo = table.Column<string>(nullable: false),
+                    User = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Hogar", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Oficina",
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                        .Annotation("MySQL:AutoIncrement", true),
                     Ciudad = table.Column<string>(nullable: false),
                     Correo = table.Column<string>(nullable: true),
                     Dia = table.Column<DateTime>(nullable: false),
@@ -50,7 +70,7 @@ namespace TotalClean.Migrations
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                        .Annotation("MySQL:AutoIncrement", true),
                     Apellidos = table.Column<string>(nullable: false),
                     ConfirmarContraseña = table.Column<string>(nullable: true),
                     ConfirmarCorreo = table.Column<string>(nullable: true),
@@ -69,6 +89,9 @@ namespace TotalClean.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Admin");
+
+            migrationBuilder.DropTable(
+                name: "Hogar");
 
             migrationBuilder.DropTable(
                 name: "Oficina");

@@ -28,7 +28,7 @@ namespace TotalClean
             services.AddMvc();
             services.AddDbContext<MvcContext>(options =>
                   //options.UseSqlite("Data Source=MvcMovie.db")
-                  options.UseMySQL("server=localhost;database=tc1;user=root;password=MySQL;port=3306")
+                  options.UseMySQL("server=localhost;database=tc;user=root;password=MySQL;port=3306")
 
                   );            
         }
