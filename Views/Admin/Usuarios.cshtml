@@ -8,11 +8,15 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <h2>Usuarios</h2>
 
-<form asp-controller="Usuarios" asp-action="Usuarios">
+<form asp-controller="Admin" asp-action="Usuarios">
     <p>
         Usuario: <input type="text" name="usuario">
         <input type="submit"  class="w3-button w3-light-green" value="Buscar" />
-    </p>    
+    </p>
+    <p>
+        Nombre: <input type="text" name="nombre">
+        <input type="submit"  class="w3-button w3-light-green" value="Buscar" />
+    </p>        
 </form>
 <br>
 

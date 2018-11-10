@@ -1,4 +1,3 @@
-C:\Users\Clase\Desktop\TotalClean\totalClean\obj\Debug\netcoreapp2.0\TotalClean.csprojAssemblyReference.cache
 C:\Users\Clase\Desktop\TotalClean\totalClean\obj\Debug\netcoreapp2.0\TotalClean.csproj.CoreCompileInputs.cache
 C:\Users\Clase\Desktop\TotalClean\totalClean\obj\Debug\netcoreapp2.0\TotalClean.AssemblyInfoInputs.cache
 C:\Users\Clase\Desktop\TotalClean\totalClean\obj\Debug\netcoreapp2.0\TotalClean.AssemblyInfo.cs

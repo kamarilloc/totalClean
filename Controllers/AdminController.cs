@@ -19,19 +19,8 @@ namespace TotalClean.Controllers
         }
 
         
-        //Controller Usuario
- public async Task<IActionResult> Usuarios(string searchString)
-        {
-             var usuarios = from m in _context.Usuario
-                 select m;
+        
 
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                usuarios = usuarios.Where(u => u.Nombre.Contains(searchString));
-            }
-            
-            return View(await usuarios.ToListAsync());
-        }
 public async Task<IActionResult> Conectar(string contraseña)
         {
              var admins = from t in _context.Admin
@@ -60,14 +49,26 @@ public async Task<IActionResult> Conectar(string contraseña)
             return View(await admins.ToListAsync());
         }
 
-    public async Task<IActionResult> Oficinas(string searchString)
+    public async Task<IActionResult> Oficinas(string empresa,string usuario,string ciudad,string distrito)
         {
              var oficinas = from m in _context.Oficina
                  select m;
 
-            if (!String.IsNullOrEmpty(searchString))
+            if (!String.IsNullOrEmpty(empresa))
             {
-                oficinas = oficinas.Where(u => u.User.Contains(searchString));
+                oficinas = oficinas.Where(u => u.Empresa.Contains(empresa));
+            }
+            if (!String.IsNullOrEmpty(usuario))
+            {
+                oficinas = oficinas.Where(u => u.User.Contains(usuario));
+            }
+            if (!String.IsNullOrEmpty(ciudad))
+            {
+                oficinas = oficinas.Where(u => u.Ciudad.Contains(ciudad));
+            }
+            if (!String.IsNullOrEmpty(distrito))
+            {
+                oficinas = oficinas.Where(u => u.Distrito.Contains(distrito));
             }
             
             return View(await oficinas.ToListAsync());
@@ -79,23 +80,40 @@ public async Task<IActionResult> Conectar(string contraseña)
 
             if (!String.IsNullOrEmpty(usuario))
             {
-                hogares = hogares.Where(h => h.User.Contains(usuario));
+                hogares = hogares.Where(h => h.User.Equals(usuario));
             }
             if (!String.IsNullOrEmpty(ciudad))
             {
-                hogares = hogares.Where(h => h.Ciudad.Contains(ciudad));
+                hogares = hogares.Where(h => h.Ciudad.Equals(ciudad));
             }
 
             if (!String.IsNullOrEmpty(distrito))
             {
-                hogares = hogares.Where(h => h.Distrito.Contains(distrito));
+                hogares = hogares.Where(h => h.Distrito.Equals(distrito));
             }
             if (!String.IsNullOrEmpty(tipo))
             {
-                hogares = hogares.Where(h => h.Tipo.Contains(tipo));
+                hogares = hogares.Where(h => h.Tipo.Equals(tipo));
             }
             
             return View(await hogares.ToListAsync());
+        }
+        public async Task<IActionResult> Usuarios(string usuario,string nombre)
+        {
+             var usuarios = from m in _context.Usuario
+                 select m;
+
+            if (!String.IsNullOrEmpty(usuario))
+            {
+                usuarios = usuarios.Where(u => u.Nombre.Equals(usuario));
+            }
+            if (!String.IsNullOrEmpty(nombre))
+            {
+                usuarios = usuarios.Where(u => u.User.Equals(nombre));
+            }
+            
+            
+            return View(await usuarios.ToListAsync());
         }
        
     }

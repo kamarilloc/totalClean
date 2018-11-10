@@ -1,10 +1,43 @@
-@model IEnumerable<TotalClean.Models.Oficinas>
+@model IEnumerable<TotalClean.Models.Oficina>
 
-    
-
-@foreach (var item in Model) {
-    <h1> @Html.DisplayFor(modelItem => item.User) </h1>
+@{
+    ViewData["Title"] = "Index";
 }
 
-<br><br><br>
+<link rel="stylesheet" href="~/css/tablas.css" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<h2>SERVICIOS DE OFICINA</h2>
 
+
+
+
+<table class="table" id="t01">
+    <thead>
+        <tr>          
+            <th> @Html.DisplayNameFor(model => model.User)</th>
+            <th> @Html.DisplayNameFor(model => model.Empresa)</th>
+            <th> @Html.DisplayNameFor(model => model.RUC)</th>
+            <th> @Html.DisplayNameFor(model => model.Telefono)</th>
+            <th> @Html.DisplayNameFor(model => model.Dia)</th>
+            <th> @Html.DisplayNameFor(model => model.Horas)</th>
+            <th> @Html.DisplayNameFor(model => model.Ciudad)</th>
+            <th> @Html.DisplayNameFor(model => model.Distrito)</th>
+            <th> @Html.DisplayNameFor(model => model.Direccion)</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.User)</td>
+            <td>@Html.DisplayFor(modelItem => item.Empresa)</td>
+            <td>@Html.DisplayFor(modelItem => item.RUC)</td>
+            <td>@Html.DisplayFor(modelItem => item.Telefono)</td>
+            <td>@Html.DisplayFor(modelItem => item.Dia)</td>
+            <td>@Html.DisplayFor(modelItem => item.Horas)</td>
+            <td>@Html.DisplayFor(modelItem => item.Ciudad)</td>
+            <td>@Html.DisplayFor(modelItem => item.Distrito)</td>
+            <td>@Html.DisplayFor(modelItem => item.Direccion)</td>
+        </tr>
+}
+    </tbody>
+</table>
