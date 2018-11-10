@@ -3,17 +3,12 @@
     "ProductVersion" TEXT NOT NULL
 );
 
-CREATE TABLE "Student" (
-    "Id" TEXT NOT NULL CONSTRAINT "PK_Student" PRIMARY KEY,
-    "Name" TEXT NULL
+
 );
 
 INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
 VALUES ('20181010130110_InitialCreate', '2.0.3-rtm-10026');
 
 
-INSERT INTO Admin (ID,Nombre,Apellidos,Contraseña) 
-VALUES (1,"Kenny","Amarillo","123");
 
-INSERT INTO Admin (ID,Nombre,Apellidos,Contraseña) 
-VALUES (2,"Raul","Martinez","7");
+

@@ -8,3 +8,4 @@ C:\Users\Clase\Desktop\TotalClean\totalClean\bin\Debug\netcoreapp2.0\TotalClean.
 C:\Users\Clase\Desktop\TotalClean\totalClean\bin\Debug\netcoreapp2.0\TotalClean.pdb
 C:\Users\Clase\Desktop\TotalClean\totalClean\obj\Debug\netcoreapp2.0\TotalClean.dll
 C:\Users\Clase\Desktop\TotalClean\totalClean\obj\Debug\netcoreapp2.0\TotalClean.pdb
+C:\Users\Clase\Desktop\totalclean\totalClean\obj\Debug\netcoreapp2.0\TotalClean.csprojAssemblyReference.cache
