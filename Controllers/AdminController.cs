@@ -19,7 +19,7 @@ namespace TotalClean.Controllers
         }
 
         
-        
+        //Controller Usuario
  public async Task<IActionResult> Usuarios(string searchString)
         {
              var usuarios = from m in _context.Usuario
