@@ -73,6 +73,7 @@ public async Task<IActionResult> Conectar(string contraseña)
             
             return View(await oficinas.ToListAsync());
         }
+        //Hogares Filtros
         public async Task<IActionResult> Hogares(string usuario, string ciudad,string distrito,string tipo)
         {
              var hogares = from m in _context.Hogar
